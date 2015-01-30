@@ -9,8 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="InAppBrowser">
       <gap:plugin name="ios-package" value="CDVInAppBrowser" />
       <gap:plugin name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
 </widget>
