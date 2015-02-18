@@ -47,10 +47,12 @@ document.addEventListener('deviceready',function() {
       // Just call your API here. The header will be sent
       $.ajax({
         url: 'http://localhost:3001/secured/ping', 
-		/*think the problem lies here look at php fi;le and get the routes to work when executed on their own then change it here*/
+		/*the server recieves the request (shows it on the command line when server 
+		running think error lies as no data sent back from what i can see
+		to start server command line php -S localhost:3001*/
         method: 'GET'
       }).then(function(data, textStatus, jqXHR) {
-        alert("The request to the secured enpoint was successfull");
+        alert("The request to the secured endpoint was successfull");
       }, function() {
         alert("You need to download the server seed and start it to call this API");
       });
