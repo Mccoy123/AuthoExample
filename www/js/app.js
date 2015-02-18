@@ -38,13 +38,16 @@ document.addEventListener('deviceready',function() {
           xhr.setRequestHeader('Authorization',
                 'Bearer ' + localStorage.getItem('userToken'));
         }
+		
+
       }
     });
 
     $('.btn-api').click(function(e) {
       // Just call your API here. The header will be sent
       $.ajax({
-        url: 'http://auth0-nodejsapi-sample.herokuapp.com/secured/ping',
+        url: 'http://localhost:3001/secured/ping', 
+		/*think the problem lies here look at php fi;le and get the routes to work when executed on their own then change it here*/
         method: 'GET'
       }).then(function(data, textStatus, jqXHR) {
         alert("The request to the secured enpoint was successfull");
